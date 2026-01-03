@@ -35,7 +35,7 @@ def create_agent():
         Tool(
             name="run_os_command",
             func=lambda cmd: run_os_command(cmd, confirmed=True),
-            description="Run an OS command safely with explicit confirmation"
+            description="Run an OS command safely. Valid command keys: list_files, create_directory, current_directory, delete_directory. Input format: 'key' or 'key path' (e.g., 'create_directory my_dir')."
         ),
     ]
 
