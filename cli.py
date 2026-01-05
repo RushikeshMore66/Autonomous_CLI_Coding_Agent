@@ -24,5 +24,17 @@ def os_command(command: str):
     console.print("[bold green]Result:[/bold green]")
     console.print(result["output"])
 
+@app.command()
+
+def plan(task:str):
+    """
+    show what the agent WOULD do , without actually doing it
+    """
+    console.print("[bold cyan] Agent is planning (no execution)...[/bold cyan]")
+    agent = create_agent()
+    result = agent.invoke({"input": task})
+    console.print("[bold green]Result:[/bold green]")
+    console.print(result["output"])
+
 if __name__ == "__main__":
     app()

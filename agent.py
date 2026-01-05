@@ -14,7 +14,7 @@ def create_agent():
     # Enforce environment validation (NO assumptions)
     load_environment()
 
-    llm = ChatGroq(model_name="llama-3.3-70b-versatile",temperature=0)
+    llm = ChatGroq(model_name="llama-3.3-70b-versatile",temperature=0.7)
 
     tools = [
         Tool(
